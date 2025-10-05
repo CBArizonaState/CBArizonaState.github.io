@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biomed Frontier — Wearables</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="assets/logo.png" alt="Biomed Frontier logo" class="logo" />
+      <h1>Biomed Frontier</h1>
+      <p class="subtitle">Wearables • BCI • Genetics • AI in Healthcare</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a aria-current="page">Wearables</a></li>
+      <li><a href="bci.html">BCI</a></li>
+      <li><a href="#">Genetics</a></li>
+      <li><a href="#">AI</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Full-width hero (uses only wearables-hero.png) -->
+    <section class="hero-bleed">
+      <figure class="hero-bleed__figure">
+        <img src="assets/wearables-hero.png"
+             alt="Smart ring, wrist wearable, and EEG headphones on a cool-blue gradient"
+             class="hero-bleed__img" />
+      </figure>
+    </section>
+
+    <section class="hero-caption">
+      <h2>Wearable Devices</h2>
+      <p>Continuous sensing for sleep, recovery, readiness, and cognitive state—brought to everyday form factors.</p>
+    </section>
+
+    <!-- One image on the left, all three companies on the right -->
+    <section class="feature">
+      <div class="feature-left">
+        <figure>
+          <img src="assets/wearables-data.png" alt="Mobile health metrics dashboard" />
+          <figcaption>Representative health metrics: HR, temperature, sleep, activity.</figcaption>
+        </figure>
+      </div>
+
+      <div class="feature-right">
+        <article>
+          <h3>WHOOP</h3>
+          <ul>
+            <li>Recovery scoring with HRV and RHR</li>
+            <li>Sleep staging and coaching</li>
+            <li>Strain tracking for training load</li>
+          </ul>
+          <p><a href="https://www.whoop.com" target="_blank" rel="noopener">Visit WHOOP →</a></p>
+        </article>
+
+        <article>
+          <h3>Oura</h3>
+          <ul>
+            <li>Readiness & sleep quality trends</li>
+            <li>Daytime heart rate and temperature</li>
+            <li>Comfortable ring form factor</li>
+          </ul>
+          <p><a href="https://ouraring.com" target="_blank" rel="noopener">Visit Oura →</a></p>
+        </article>
+
+        <article>
+          <h3>Neurable</h3>
+          <ul>
+            <li>EEG headphones estimate focus & cognitive state</li>
+            <li>Real-time feedback for productivity</li>
+            <li>Everyday audio hardware integration</li>
+          </ul>
+          <p><a href="https://neurable.com" target="_blank" rel="noopener">Visit Neurable →</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Biomed Frontier</p>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

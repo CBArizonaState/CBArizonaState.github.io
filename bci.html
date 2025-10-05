@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biomed Frontier — Brain–Computer Interfaces</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="assets/logo.png" alt="Biomed Frontier logo" class="logo" />
+      <h1>Biomed Frontier</h1>
+      <p class="subtitle">Wearables • BCI • Genetics • AI in Healthcare</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="wearables.html">Wearables</a></li>
+      <li><a aria-current="page">BCI</a></li>
+      <li><a href="#">Genetics</a></li>
+      <li><a href="#">AI</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Full-width hero (uses only bci-hero.png) -->
+    <section class="hero-bleed">
+      <figure class="hero-bleed__figure">
+        <img src="assets/bci-hero.png"
+             alt="Semi-transparent brain mesh with EEG waveform and network nodes"
+             class="hero-bleed__img" />
+      </figure>
+    </section>
+
+    <section class="hero-caption">
+      <h2>Brain–Computer Interfaces</h2>
+      <p>BCIs translate neural activity into control signals for communication, movement, and rehabilitation—spanning non-invasive to implantable approaches.</p>
+    </section>
+
+    <!-- Neuralink feature (text-forward) -->
+    <section class="feature">
+      <div class="feature-right">
+        <h3>Neuralink</h3>
+        <ul>
+          <li>High-channel-count implant with wireless telemetry</li>
+          <li>Robotic surgical insertion</li>
+          <li>Assistive communication & cursor control</li>
+        </ul>
+        <p><a href="https://neuralink.com" target="_blank" rel="noopener">Visit Neuralink →</a></p>
+      </div>
+    </section>
+
+    <!-- Optional: More BCI companies (text only, no images) -->
+    <section class="feature">
+      <div class="feature-right">
+        <h3>More BCI Teams to Watch</h3>
+        <p><strong>Synchron</strong> — endovascular “Stentrode” approach for minimally invasive neural recording.</p>
+        <p><strong>Paradromics</strong> — high-bandwidth neural data pipelines for speech & communication restoration.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Biomed Frontier</p>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

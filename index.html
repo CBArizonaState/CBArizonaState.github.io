@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biomed Frontier</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <img src="assets/logo.png" alt="Biomed Frontier logo" class="logo" />
+      <h1>Biomed Frontier</h1>
+      <p class="subtitle">Wearables • BCI • Genetics • AI in Healthcare</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#wearables">Wearables</a></li>
+      <li><a href="#bci">BCI</a></li>
+      <li><a href="#genetics">Genetics</a></li>
+      <li><a href="#ai">AI</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Full-bleed hero image -->
+    <section class="hero-bleed">
+      <figure class="hero-bleed__figure">
+        <img src="assets/hero.png" alt="Biomedical technology concept" class="hero-bleed__img" />
+      </figure>
+    </section>
+
+    <!-- Caption card under the hero -->
+    <section class="hero-caption">
+      <h2>Innovation That Changes Lives!</h2>
+      <p>Explore category pages highlighting companies and products pushing the frontier of healthcare.</p>
+    </section>
+
+    <!-- Feature Block -->
+    <section id="wearables" class="feature">
+      <div class="feature-left">
+        <img src="assets/product.png" alt="Product graphic" />
+      </div>
+      <div class="feature-right">
+        <h3>Top Companies to Watch</h3>
+        <ul>
+          <li>Neuralink</li>
+          <li>Oura</li>
+          <li>CND LifeSciences</li>
+        </ul>
+        <p>These companies are on the cutting edge of the biotech industries, pushing boundaries and constantly innovating.</p>
+        <p><a href="https://example.com" target="_blank" rel="noopener">Visit site →</a></p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h3>Contact</h3>
+      <form>
+        <label for="name">Name:</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="interest">Interest:</label>
+        <select id="interest" name="interest">
+          <option>Wearables</option>
+          <option>BCI</option>
+          <option>Genetics</option>
+          <option>AI</option>
+        </select>
+
+        <label for="message">Comments:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Biomed Frontier | Contact | Email List</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
