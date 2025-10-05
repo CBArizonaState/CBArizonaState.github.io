@@ -1,0 +1,132 @@
+/* ===== Theme ===== */
+:root {
+  --text: #22252a;
+  --background: #dfe7ec;
+  --primary: #526fc4;
+  --secondary: #97ace5;
+  --accent: #1c82e9;
+}
+
+/* ===== Reset / base ===== */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Centered layout rails for page sections */
+header, nav, main, footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ===== Header ===== */
+header { text-align: center; position: relative; z-index: 2; }
+.logo { height: 80px; width: auto; }
+.subtitle { color: var(--secondary); }
+
+/* ===== Nav ===== */
+nav {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: sticky;   /* stays visible on scroll */
+  top: 0;
+  z-index: 3;         /* above hero so links are clickable */
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: .75rem;
+  list-style: none;
+  padding: .5rem;
+  margin: 0;
+  background: var(--primary);
+  border-radius: 6px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+}
+nav a:hover,
+nav a[aria-current="page"] { background: var(--accent); }
+
+/* ===== Full-bleed hero (edge-to-edge) ===== */
+.hero-bleed {
+  position: relative;
+  z-index: 1;
+  margin: 0;                 /* keep in normal flow */
+  padding: 0;
+}
+.hero-bleed__figure {
+  margin: 0;
+}
+.hero-bleed__img {
+  display: block;
+  width: 100vw;              /* full browser width */
+  max-width: 100%;
+  height: clamp(220px, 38vw, 420px);
+  object-fit: cover;
+  margin-left: 50%;
+  transform: translateX(-50%); /* center the 100vw image in the 1100px rail */
+  border-radius: 0;
+}
+.hero-caption {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 0;
+}
+
+/* ===== Feature block ===== */
+.feature {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.feature-left img,
+.feature-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+@media (min-width: 800px) {
+  .feature { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+
+/* Links inside content */
+main a { color: var(--accent); text-decoration: none; }
+main a:hover { text-decoration: underline; }
+
+/* ===== Form (used on home page) ===== */
+form {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: .75rem 1rem;
+  max-width: 600px;
+}
+form label { text-align: right; }
+form input, form select, form textarea, form button {
+  padding: .5rem;
+  border: 1px solid var(--secondary);
+  border-radius: 4px;
+  font: inherit;
+}
+form textarea { resize: vertical; }
+form button {
+  grid-column: 2 / 3;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+form button:hover { background: var(--accent); }
+
+/* ===== Footer ===== */
+footer { text-align: center; margin-top: 2rem; color: var(--text); }
