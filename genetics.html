@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biomed Frontier — Genetics</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="assets/logo.png" alt="Biomed Frontier logo" class="logo" />
+      <h1>Biomed Frontier</h1>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="wearables.html">Wearables</a></li>
+      <li><a href="bci.html">BCI</a></li>
+      <li><a href="genetics.html" aria-current="page">Genetics</a></li>
+      <li><a href="ai.html">AI</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Full-width hero (updated to your genetics hero image) -->
+    <section class="hero-bleed">
+      <figure class="hero-bleed__figure">
+        <img src="assets/genetics-hero.png"
+             alt="DNA helix over a cool-blue biomedical gradient"
+             class="hero-bleed__img" />
+      </figure>
+    </section>
+
+    <section class="hero-caption">
+      <h2>Genetics</h2>
+      <p>
+        From sequencing and variant interpretation to gene editing, genetics is redefining diagnostics, risk prediction,
+        and targeted therapies. Advances in data pipelines and molecular tools are accelerating precision medicine.
+      </p>
+    </section>
+
+    <!-- Genetics video (kept) -->
+    <section class="video-section">
+      <video controls muted playsinline class="bci-video">
+        <source src="assets/lab video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>Lab workflow overview: sample preparation, sequencing, and analysis pipeline.</figcaption>
+    </section>
+
+    <!-- Brief topic context -->
+    <section class="feature">
+      <div class="feature-right">
+        <h3>Sequencing & Variant Interpretation</h3>
+        <ul>
+          <li>Whole exome/genome sequencing for rare disease and oncology</li>
+          <li>Clinical curation: pathogenicity classification and reporting</li>
+          <li>Population-scale insights and polygenic risk scores</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Companies (3) -->
+    <section class="feature">
+      <div class="feature-right">
+        <h3>Companies to Watch</h3>
+        <p>
+          <strong><a href="https://www.illumina.com" target="_blank" rel="noopener">Illumina</a></strong> — Leader in next-generation sequencing platforms and workflows that power clinical and research genomics worldwide.
+        </p>
+        <p>
+          <strong><a href="https://crisprtx.com" target="_blank" rel="noopener">CRISPR Therapeutics</a></strong> — Developing CRISPR/Cas9-based gene-editing therapies for hemoglobinopathies and other serious diseases.
+        </p>
+        <p>
+          <strong><a href="https://www.invitae.com" target="_blank" rel="noopener">Invitae</a></strong> — Clinical genetic testing and interpretation services that bring actionable insights to patients and providers.
+        </p>
+      </div>
+    </section>
+
+    <!-- (Removed the prior feature image block on purpose) -->
+  </main>
+
+ <footer class="site-footer">
+  <p>
+    &copy; <span id="year"></span> Biomed Frontier · 
+    <a href="index.html#contact">Contact</a> · 
+    <a href="mailto:biomedfrontier.contact@asu.edu">Email</a>
+  </p>
+</footer>
+
+<script>
+  // one per page is fine
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

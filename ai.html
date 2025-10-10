@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biomed Frontier — AI in Healthcare</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="assets/logo.png" alt="Biomed Frontier logo" class="logo" />
+      <h1>Biomed Frontier</h1>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="wearables.html">Wearables</a></li>
+      <li><a href="bci.html">BCI</a></li>
+      <li><a href="genetics.html">Genetics</a></li>
+      <li><a href="ai.html" aria-current="page">AI</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-bleed">
+      <figure class="hero-bleed__figure">
+        <img src="assets/ai-hero.png" alt="AI-powered biomedical visualization" class="hero-bleed__img" />
+      </figure>
+    </section>
+
+    <section class="hero-caption">
+      <h2>AI in Healthcare</h2>
+      <p>
+        Artificial Intelligence is transforming medicine by enhancing diagnostics, automating workflows, 
+        and personalizing care. From radiology and pathology to predictive analytics, AI tools are accelerating 
+        innovation in every corner of healthcare.
+      </p>
+    </section>
+
+    <!-- Feature 1 -->
+    <section class="feature">
+      <div class="feature-right">
+        <h3>Imaging & Signal Analysis</h3>
+        <ul>
+          <li>Deep learning for radiology, pathology, and ophthalmology</li>
+          <li>ECG/EEG interpretation and anomaly detection</li>
+          <li>Automated triage and prioritization in clinical workflows</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- AI Companies -->
+    <section class="feature">
+      <div class="feature-right">
+        <h3>Leading AI Companies in Healthcare</h3>
+
+        <p>
+          <strong><a href="https://www.pathai.com" target="_blank" rel="noopener">PathAI</a></strong> — 
+          Specializes in AI-powered pathology diagnostics, improving accuracy in disease detection and 
+          biomarker quantification for research and clinical applications.
+        </p>
+
+        <p>
+          <strong><a href="https://www.tempus.com" target="_blank" rel="noopener">Tempus</a></strong> — 
+          Uses AI and molecular data to personalize cancer care, combining clinical records and genomic insights 
+          for precise treatment recommendations.
+        </p>
+
+        <p>
+          <strong><a href="https://www.babylonhealth.com" target="_blank" rel="noopener">Babylon Health</a></strong> — 
+          Integrates conversational AI and virtual health services, providing patients with 
+          symptom assessment, triage, and remote consultations powered by machine learning.
+        </p>
+      </div>
+    </section>
+
+    <!-- AI Feature Image (optional visual) -->
+    <section class="panel">
+      <h3>AI-Powered Insight</h3>
+      <figure>
+        <img src="assets/ai-feature.png" alt="AI in medical imaging visualization" />
+        <figcaption>
+          AI models are trained on millions of data points—spanning medical images, sensor data, and genomics—to improve accuracy and reduce diagnostic time.
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+
+   <footer class="site-footer">
+  <p>
+    &copy; <span id="year"></span> Biomed Frontier · 
+    <a href="index.html#contact">Contact</a> · 
+    <a href="mailto:biomedfrontier.contact@asu.edu">Email</a>
+  </p>
+</footer>
+
+<script>
+  // one per page is fine
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
