@@ -130,3 +130,58 @@ form button:hover { background: var(--accent); }
 
 /* ===== Footer ===== */
 footer { text-align: center; margin-top: 2rem; color: var(--text); }
+
+/* ===== Video Section ===== */
+.video-section {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.bci-video {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.video-section figcaption {
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+}
+/* --- FIX: keep hero/header banners full-width --- */
+.hero-bleed__figure { margin: 0; }
+.hero-bleed__img {
+  display: block;
+  width: 100%;
+  height: auto;        /* no forced cropping */
+  max-height: none;    /* undo earlier cap */
+  border-radius: 0;    /* edge-to-edge */
+  box-shadow: none;    /* no shadow on banners */
+  object-fit: unset;   /* ensure no crop */
+}
+
+/* --- Feature/Panel images only: scale down nicely --- */
+.feature-image img,
+.panel img,
+.feature-left img,
+.feature-right img {
+  display: block;
+  width: clamp(520px, 75vw, 950px);  /* smaller + responsive */
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+/* Optional: caption tidy */
+figure figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+  margin-top: 0.5rem;
+}
