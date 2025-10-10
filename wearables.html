@@ -11,7 +11,7 @@
     <div class="header-content">
       <img src="assets/logo.png" alt="Biomed Frontier logo" class="logo" />
       <h1>Biomed Frontier</h1>
-      <p class="subtitle">Wearables • BCI • Genetics • AI in Healthcare</p>
+     
     </div>
   </header>
 
@@ -20,8 +20,8 @@
     <li><a href="index.html" aria-current="page">Home</a></li>
     <li><a href="wearables.html">Wearables</a></li>
     <li><a href="bci.html">BCI</a></li>
-    <li><a href="#">Genetics</a></li>
-    <li><a href="#">AI</a></li>
+    <li><a href="genetics.html">Genetics</a></li>
+    <li><a href="ai.html">AI</a></li>
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
 </nav>
@@ -39,7 +39,7 @@
 
     <section class="hero-caption">
       <h2>Wearable Devices</h2>
-      <p>Continuous sensing for sleep, recovery, readiness, and cognitive state—brought to everyday form factors.</p>
+      <p>Continuous sensing for sleep, recovery, readiness, and cognitive state—brought to everyday form factors. Wearable devices offer continous monitoring in a noninvasive and comfortable format to provide users with realtime health data to help guide their lifestyle and health choices! Featured below are some of the top companies in this space that offer a variety of devices that are worth checking out!</p>
     </section>
 
     <!-- One image on the left, all three companies on the right -->
@@ -47,7 +47,7 @@
       <div class="feature-left">
         <figure>
           <img src="assets/wearables-data.png" alt="Mobile health metrics dashboard" />
-          <figcaption>Representative health metrics: HR, temperature, sleep, activity.</figcaption>
+          <figcaption>Wearable devices are typically tied to a mobile app to provide users with thier health data in a user friendly , visually pleasing manner. Above is an example representative of health metrics: HR, temperature, sleep, activity.</figcaption>
         </figure>
       </div>
 
@@ -85,10 +85,20 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Biomed Frontier</p>
-  </footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+ <footer class="site-footer">
+  <p>
+    &copy; <span id="year"></span> Biomed Frontier · 
+    <a href="index.html#contact">Contact</a> · 
+    <a href="mailto:biomedfrontier.contact@asu.edu">Email</a>
+  </p>
+</footer>
+
+<script>
+  // one per page is fine
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
+
 
