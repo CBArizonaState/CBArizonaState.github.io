@@ -12,7 +12,7 @@
     <div class="header-content">
       <img src="assets/logo.png" alt="Biomed Frontier logo" class="logo" />
       <h1>Biomed Frontier</h1>
-      <p class="subtitle">Wearables • BCI • Genetics • AI in Healthcare</p>
+     
     </div>
   </header>
 
@@ -21,8 +21,8 @@
     <li><a href="index.html" aria-current="page">Home</a></li>
     <li><a href="wearables.html">Wearables</a></li>
     <li><a href="bci.html">BCI</a></li>
-    <li><a href="#">Genetics</a></li>
-    <li><a href="#">AI</a></li>
+    <li><a href="genetics.html">Genetics</a></li>
+    <li><a href="ai.html">AI</a></li>
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
 </nav>
@@ -39,7 +39,9 @@
     <!-- Caption card under the hero -->
     <section class="hero-caption">
       <h2>Innovation That Changes Lives!</h2>
-      <p>Explore category pages highlighting companies and products pushing the frontier of healthcare.</p>
+      <p> Biomed Frontier maps the companies and technologies reshaping health—from wearables that quantify recovery, to brain–computer interfaces,
+    genomics, and AI that accelerates diagnosis and care. Explore clear, curated snapshots of the space with concise summaries, visuals,
+    and links to dig deeper.</p>
     </section>
 
     <!-- Feature Block -->
@@ -55,13 +57,13 @@
           <li>CND LifeSciences</li>
         </ul>
         <p>These companies are on the cutting edge of the biotech industries, pushing boundaries and constantly innovating.</p>
-        <p><a href="https://example.com" target="_blank" rel="noopener">Visit site →</a></p>
+        <p><a href="https://example.com" target="_blank" rel="noopener"></a></p>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact">
-      <h3>Contact</h3>
+      <h3>Request a Company to be Featured!</h3>
       <form>
         <label for="name">Name:</label>
         <input id="name" name="name" type="text" required />
@@ -69,7 +71,7 @@
         <label for="email">Email:</label>
         <input id="email" name="email" type="email" required />
 
-        <label for="interest">Interest:</label>
+        <label for="interest">Category:</label>
         <select id="interest" name="interest">
           <option>Wearables</option>
           <option>BCI</option>
@@ -85,13 +87,19 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Biomed Frontier | Contact | Email List</p>
-  </footer>
+ <footer class="site-footer">
+  <p>
+    &copy; <span id="year"></span> Biomed Frontier · 
+    <a href="index.html#contact">Contact</a> · 
+    <a href="mailto:biomedfrontier.contact@asu.edu">Email</a>
+  </p>
+</footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<script>
+  // one per page is fine
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
 
