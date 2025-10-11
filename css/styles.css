@@ -185,3 +185,36 @@ figure figcaption {
   text-align: center;
   margin-top: 0.5rem;
 }
+.ai-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background-color: #f9fbff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ai-table th {
+  background-color: #526fc4;
+  color: white;
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 600;
+}
+
+.ai-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #d9e1f2;
+  color: #333;
+}
+
+.ai-table tr:last-child td {
+  border-bottom: none;
+}
+
+.ai-table tr:hover {
+  background-color: #eef2ff;
+  transition: background 0.2s ease-in-out;
+}
+
