@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carson Biro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --subtle: #555;
+      --link: #8c1d40;
+      --link-hover: #5c1228;
+      --section-gap: 2.8rem;
+      --max-w: 780px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 16.5px;
+      line-height: 1.7;
+      padding: 3rem 1.5rem 6rem;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { color: var(--link-hover); text-decoration: underline; }
+
+    .page { max-width: var(--max-w); margin: 0 auto; }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      align-items: flex-start;
+      gap: 2.2rem;
+      margin-bottom: var(--section-gap);
+    }
+
+    .avatar-placeholder {
+      width: 148px;
+      height: 148px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #8c1d40 0%, #5c1228 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffc627;
+      font-size: 3.2rem;
+      font-weight: 700;
+      font-family: 'Lora', serif;
+      border: 2px solid #e8d8dd;
+    }
+
+    /* When you have a photo, replace the div above with:
+       <img class="avatar-img" src="photo.jpg" alt="Carson Biro"> */
+    .avatar-img {
+      width: 148px;
+      height: 148px;
+      border-radius: 6px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 2px solid #e8d8dd;
+    }
+
+    .header-text h1 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      line-height: 1.2;
+    }
+
+    .header-text .tagline {
+      font-size: 0.97rem;
+      color: var(--subtle);
+      margin-bottom: 0.2rem;
+    }
+
+    .header-text .email {
+      font-size: 0.9rem;
+      color: var(--subtle);
+      margin-bottom: 0.85rem;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      font-size: 0.94rem;
+    }
+
+    .social-links a { color: var(--subtle); font-weight: 600; }
+    .social-links a:hover { color: var(--link); text-decoration: none; }
+    .divider { color: #ccc; margin: 0 0.45rem; }
+
+    /* BIO */
+    .bio {
+      margin-bottom: var(--section-gap);
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+    .bio p + p { margin-top: 0.9rem; }
+
+    /* SECTION */
+    section { margin-bottom: var(--section-gap); }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1.4rem;
+      padding-bottom: 0.45rem;
+      border-bottom: 2px solid #f2e8eb;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* ENTRY */
+    .entry {
+      display: flex;
+      gap: 1.4rem;
+      margin-bottom: 2rem;
+      align-items: flex-start;
+    }
+
+    .entry-logo {
+      width: 110px;
+      min-height: 78px;
+      flex-shrink: 0;
+      border-radius: 5px;
+      border: 1px solid #ececec;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      overflow: hidden;
+    }
+
+    .entry-logo img {
+      max-width: 100%;
+      max-height: 62px;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Coloured fallback blocks */
+    .logo-asu    { background: #8c1d40; }
+    .logo-exos   { background: #111111; }
+    .logo-cnd    { background: #003087; }
+    .logo-mayo   { background: #ffffff; border: 1px solid #d0d0d0 !important; }
+    .logo-simurgh{ background: #1b4332; }
+
+    .logo-label {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-align: center;
+      line-height: 1.35;
+      padding: 4px 2px;
+    }
+    .logo-asu .logo-label    { color: #ffc627; }
+    .logo-exos .logo-label   { color: #ffffff; }
+    .logo-cnd .logo-label    { color: #ffffff; }
+    .logo-mayo .logo-label   { color: #003087; }
+    .logo-simurgh .logo-label{ color: #95d5b2; }
+
+    .entry-body { flex: 1; min-width: 0; }
+
+    .entry-org {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 0.1rem;
+    }
+
+    .entry-role {
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--subtle);
+      margin-bottom: 0.5rem;
+    }
+
+    .entry-bullets {
+      list-style: none;
+      padding: 0;
+      font-size: 0.925rem;
+      color: #333;
+    }
+
+    .entry-bullets li {
+      padding-left: 1.1em;
+      position: relative;
+      margin-bottom: 0.3rem;
+      line-height: 1.6;
+    }
+
+    .entry-bullets li::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      color: var(--link);
+      font-weight: 700;
+    }
+
+    .entry-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 0.55rem;
+      margin-top: 0.6rem;
+      font-size: 0.83rem;
+    }
+
+    .entry-links a {
+      background: #fdf4f6;
+      border: 1px solid #e8cdd4;
+      color: #8c1d40;
+      padding: 0.07rem 0.5rem;
+      border-radius: 3px;
+      font-weight: 600;
+      transition: background 0.14s;
+    }
+    .entry-links a:hover { background: #f5dde3; text-decoration: none; }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.9rem 2.5rem;
+      font-size: 0.93rem;
+    }
+
+    .skill-item strong {
+      color: var(--link);
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.18rem;
+    }
+
+    .skill-item span { color: #444; line-height: 1.5; }
+
+    /* FOOTER */
+    footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #bbb;
+      text-align: center;
+      border-top: 1px solid #f0f0f0;
+      padding-top: 1.5rem;
+    }
+
+    footer a { color: #aaa; }
+    footer a:hover { color: var(--link); }
+
+    @media (max-width: 560px) {
+      .header { flex-direction: column; align-items: center; text-align: center; }
+      .social-links { justify-content: center; }
+      .entry { flex-direction: column; }
+      .entry-logo { width: 100%; max-width: 180px; min-height: 60px; }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <!-- Replace with <img class="avatar-img" src="your_photo.jpg" alt="Carson Biro"> when ready -->
+    <div class="avatar-placeholder">CB</div>
+    <div class="header-text">
+      <h1>Carson Biro</h1>
+      <p class="tagline">B.S.E. Biomedical Engineering · Arizona State University</p>
+      <p class="tagline">M.S. Candidate · ASU–Mayo Clinic Innovations Program</p>
+      <p class="email"><a href="mailto:cbiro11@outlook.com">cbiro11@outlook.com</a></p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/carsonbiro" target="_blank">LinkedIn</a>
+        <span class="divider">/</span>
+        <a href="#">GitHub</a>
+        <span class="divider">/</span>
+        <a href="#">CV</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BIO -->
+  <div class="bio">
+    <p>
+      I am a Biomedical Engineering graduate at
+      <a href="https://www.asu.edu" target="_blank">Arizona State University</a> (B.S.E., May 2026)
+      and an incoming M.S. student in the
+      <a href="https://mayo.asu.edu" target="_blank">ASU–Mayo Clinic Innovations in Medical and Patient Care Technologies</a>
+      program (expected Aug 2027). My work sits at the intersection of
+      <strong>human performance research</strong>, <strong>AI-assisted diagnostics</strong>,
+      and <strong>global health engineering</strong>.
+    </p>
+    <p>
+      I have conducted independent human performance studies at
+      <a href="https://www.teamexos.com" target="_blank">Exos</a>,
+      contributed to digital pathology AI development at
+      <a href="https://cndlifesciences.com" target="_blank">CND Life Sciences</a>,
+      and led a cross-national senior capstone project designing low-cost wound care solutions
+      for resource-limited settings in Grenada with the
+      <strong>Simurgh Global Surgery Collaborative</strong>.
+    </p>
+  </div>
+
+  <!-- EDUCATION -->
+  <section>
+    <h2>🎓 Education</h2>
+
+    <div class="entry">
+      <div class="entry-logo logo-asu">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Arizona_State_University_seal.svg/200px-Arizona_State_University_seal.svg.png"
+             alt="ASU"
+             onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend','<span class=\'logo-label\'>ASU &times; Mayo Clinic</span>')">
+      </div>
+      <div class="entry-body">
+        <div class="entry-org">Arizona State University × Mayo Clinic</div>
+        <div class="entry-role">M.S., Innovations in Medical and Patient Care Technologies · Expected Aug 2027</div>
+        <ul class="entry-bullets">
+          <li>Collaborative graduate program bridging engineering, clinical practice, and healthcare technology innovation.</li>
+          <li>Focus on translational device development, patient-centered design, and regulatory science.</li>
+        </ul>
+        <div class="entry-links">
+          <a href="https://mayo.asu.edu" target="_blank">program ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-logo logo-asu">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Arizona_State_University_seal.svg/200px-Arizona_State_University_seal.svg.png"
+             alt="ASU"
+             onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend','<span class=\'logo-label\'>Arizona State University</span>')">
+      </div>
+      <div class="entry-body">
+        <div class="entry-org">Arizona State University</div>
+        <div class="entry-role">B.S.E., Biomedical Engineering · May 2026 &nbsp;·&nbsp; Minor: Business · Dec 2025</div>
+        <ul class="entry-bullets">
+          <li>Coursework in biomedical device design, signal processing, cell biology, and statistical modeling.</li>
+          <li>Certifications: CITI Program (Human Subjects Research), SolidWorks CSWA, CPR.</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <h2>💼 Experience</h2>
+
+    <div class="entry">
+      <div class="entry-logo logo-exos">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Exos_Logo.svg/200px-Exos_Logo.svg.png"
+             alt="Exos"
+             onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend','<span class=\'logo-label\'>EXOS</span>')">
+      </div>
+      <div class="entry-body">
+        <div class="entry-org">Exos</div>
+        <div class="entry-role">Human Performance Lab Intern · Spring 2026 · Tempe, AZ</div>
+        <ul class="entry-bullets">
+          <li>Designed and led an independent study evaluating breathing-controlled recovery during cycling HIIT using HR, HRV, and SpO₂ via wearable technologies.</li>
+          <li>Developed end-to-end research infrastructure: protocol, consent process, recruitment, data collection instruments, manual of procedures, and analysis plan.</li>
+          <li>Created SOPs for data collection, participant tracking, and data handling ensuring session repeatability.</li>
+          <li>Presented study design and findings to a multidisciplinary audience across performance, coaching, and research teams.</li>
+        </ul>
+        <div class="entry-links">
+          <a href="https://www.teamexos.com" target="_blank">teamexos.com ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-logo logo-cnd">
+        <img src="https://cndlifesciences.com/wp-content/uploads/2020/10/CND-Logo-Stacked-white.png"
+             alt="CND Life Sciences"
+             onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend','<span class=\'logo-label\'>CND Life Sciences</span>')">
+      </div>
+      <div class="entry-body">
+        <div class="entry-org">CND Life Sciences</div>
+        <div class="entry-role">Process Engineering Intern · Summer 2025 · Scottsdale, AZ</div>
+        <ul class="entry-bullets">
+          <li>Developed a data-driven capacity optimization model for pathologist licensing, improving workload distribution under regulatory constraints.</li>
+          <li>Built a demand-weighted allocation engine to prioritize licensing actions based on commercial demand projections.</li>
+          <li>Delivered a company-wide presentation summarizing internship outcomes to an audience of 200+ employees.</li>
+        </ul>
+        <div class="entry-links">
+          <a href="https://cndlifesciences.com" target="_blank">cndlifesciences.com ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-logo logo-cnd">
+        <img src="https://cndlifesciences.com/wp-content/uploads/2020/10/CND-Logo-Stacked-white.png"
+             alt="CND Life Sciences"
+             onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend','<span class=\'logo-label\'>CND Life Sciences</span>')">
+      </div>
+      <div class="entry-body">
+        <div class="entry-org">CND Life Sciences</div>
+        <div class="entry-role">Digital Pathology R&amp;D Intern · Spring 2025 · Scottsdale, AZ</div>
+        <ul class="entry-bullets">
+          <li>Supported AI model development for automated histological image analysis of skin biopsies detecting phosphorylated α-synuclein (p-syn) — a key biomarker for Parkinson's disease.</li>
+          <li>Preprocessed and analyzed high-resolution tissue images captured by Olympus V200, building structured datasets for model evaluation.</li>
+          <li>Calculated model sensitivity, specificity, and detection accuracy using confusion matrices across extensive datasets.</li>
+          <li>Designed a longitudinal study assessing scanning consistency, fluorescence integrity, and signal decay in PSYN-stained tissue sections.</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- PROJECTS & RESEARCH -->
+  <section>
+    <h2>🔬 Projects &amp; Research</h2>
+
+    <div class="entry">
+      <div class="entry-logo logo-simurgh">
+        <span class="logo-label">Simurgh Global Surgery Collaborative</span>
+      </div>
+      <div class="entry-body">
+        <div class="entry-org">ASU Senior Capstone × Simurgh Global Surgery Collaborative</div>
+        <div class="entry-role">Wound Care Solutions for Patients in Grenada · Fall 2025 – Spring 2026</div>
+        <ul class="entry-bullets">
+          <li>Developing a low-cost diabetic foot ulcer (DFU) wound care hydrogel tailored to resource-limited clinical settings in Grenada.</li>
+          <li>Primary point of contact for cross-national coordination with surgeons, medical students, and healthcare partners to align design requirements and treatment protocols.</li>
+          <li>Managed material procurement and detailed project budget tracking to ensure cost-efficient execution.</li>
+          <li>Conducted comparative analysis of debridement agents, material compatibility, and biocompatibility standards (ISO 10993) for safety and efficacy.</li>
+          <li>Defined design constraints around limited surgical infrastructure, supply chain challenges, and sanitation limitations for sustainable development.</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <h2>🛠 Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <strong>Engineering &amp; Design</strong>
+        <span>SolidWorks (CSWA), AutoCAD, Fusion 360, Biomedical Device Design, Rapid Prototyping</span>
+      </div>
+      <div class="skill-item">
+        <strong>Programming &amp; Data Analysis</strong>
+        <span>Python (NumPy, Pandas, Scikit-learn), MATLAB, Data Visualization, Statistical Modeling, Signal Processing</span>
+      </div>
+      <div class="skill-item">
+        <strong>Research Methods</strong>
+        <span>Protocol Development, Human Subjects Research, Hypothesis Testing, ANOVA, SOP Development, Data Collection &amp; Instrumentation</span>
+      </div>
+      <div class="skill-item">
+        <strong>Lab &amp; Imaging</strong>
+        <span>Cell Biology, Tissue Imaging, Fluorescence Microscopy, Olympus V200, Image Processing, Experimental Design</span>
+      </div>
+      <div class="skill-item">
+        <strong>Classification Metrics</strong>
+        <span>Sensitivity, Specificity, Accuracy, Confusion Matrices, Model Evaluation</span>
+      </div>
+      <div class="skill-item">
+        <strong>Certifications</strong>
+        <span>CITI Program (Human Subjects Research), SolidWorks CSWA, CPR</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Carson Biro &nbsp;·&nbsp;
+    <a href="mailto:cbiro11@outlook.com">cbiro11@outlook.com</a> &nbsp;·&nbsp;
+    <a href="https://www.linkedin.com/in/carsonbiro" target="_blank">LinkedIn</a>
+    <br><br>
+    Design inspired by <a href="https://danielshin1.github.io" target="_blank">danielshin1.github.io</a>
+  </footer>
+
+</div>
+</body>
+</html>
